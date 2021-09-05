@@ -1,0 +1,17 @@
+:host {
+    display: block;
+    border: 1px solid black;
+    padding: 10px;
+}
+  
+:host(.active) {
+    border-width: 3px;
+}
+
+:host-context(.theme-light) h2 {
+    background-color: #eef;
+}
+
+:host ::ng-deep h3 {
+    font-style: italic;
+}
