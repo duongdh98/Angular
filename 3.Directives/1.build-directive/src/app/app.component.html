@@ -1,0 +1,145 @@
+<h1>Built-in Directives</h1>
+
+<h2>Built-in attribute directives</h2>
+
+<h3 id="ngModel">NgModel (two-way) Binding</h3>
+
+<fieldset>
+  <p>Current item name: {{currentItem.name}}</p>
+  <p>
+    <label for="without">without NgModel:</label>
+    <input [value]="currentItem.name" (input)="currentItem.name=getValue($event)" id="without">
+  </p>
+
+  <p>
+    <label for="example-ngModel">[(ngModel)]:</label>
+    <input [(ngModel)]="currentItem.name" id="example-ngModel">
+  </p>
+
+  <p>
+    <label for="example-bindon">bindon-ngModel: </label>
+    <input bindon-ngModel="currentItem.name" id="example-bindon">
+  </p>
+
+  <p>
+    <label for="example-change">(ngModelChange)="...name=$event":</label>
+    <input [ngModel]="currentItem.name" (ngModelChange)="currentItem.name=$event" id="example-change">
+  </p>
+
+  <p>
+    <label for="example-uppercase">(ngModelChange)="setUppercaseName($event)"
+      <input [ngModel]="currentItem.name" (ngModelChange)="setUppercaseName($event)" id="example-uppercase">
+    </label>
+  </p>
+</fieldset>
+<hr>
+<hr><h2 id="ngClass">NgClass Binding</h2>
+<p>currentClasses is {{currentClasses | json}}</p>
+<div [ngClass]="currentClasses">
+  This div is initially saveable, unchanged, and special.
+</div>
+<ul>
+  <li>
+    <label for="saveable">saveable</label>
+    <input type="checkbox" [(ngModel)]="canSave" id="saveable">
+  </li>
+  <li>
+    <label for="modified">modified:</label>
+    <input type="checkbox" [value]="!isUnchanged" (change)="isUnchanged=!isUnchanged" id="modified"></li>
+  <li>
+    <label for="special">special: <input type="checkbox" [(ngModel)]="isSpecial" id="special"></label>
+  </li>
+</ul>
+<button (click)="setCurrentClasses()">Refresh currentClasses</button>
+
+<div [ngClass]="currentClasses">
+  This div should be 
+    {{ canSave ? "": "not"}} saveable,
+    {{ isUnchanged ? "unchanged" : "modified" }} and
+    {{ isSpecial ? "": "not"}} special after clicking "Refresh".
+</div>
+<!-- toggle the "special" class on/off with a property -->
+<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+<div class="helpful study course">Helpful study course</div>
+<div [ngClass]="{'helpful':false, 'study':true, 'course':true}">Study course</div>
+<!-- NgStyle binding -->
+<hr><h3>NgStyle Binding</h3>
+<div [style.font-size]="isSpecial ? 'x-large' : 'smaller'">
+  This div is x-large or smaller.
+</div>
+<div [ngStyle]="currentStyles">
+  This div is initially italic, normal weight, and extra large (24px).
+</div>
+<br>
+<label>italic: <input type="checkbox" [(ngModel)]="canSave"></label> |
+<label>normal: <input type="checkbox" [(ngModel)]="isUnchanged"></label> |
+<label>xlarge: <input type="checkbox" [(ngModel)]="isSpecial"></label>
+<button (click)="setCurrentStyles()">Refresh currentStyles</button>
+<br><br>
+<div [ngStyle]="currentStyles">
+  This div should be 
+    {{ canSave ? "italic": "plain"}},
+    {{ isUnchanged ? "normal weight" : "bold" }} and,
+    {{ isSpecial ? "extra large": "normal size"}} after clicking "Refresh".
+</div>
+
+<hr>
+<h2>Built-in structural directives</h2>
+<h3 id="ngIf">NgIf Binding</h3>
+<div>
+  <p>If isActive is true, app-item-detail will render: </p>
+  <app-item-detail *ngIf="isActive" [item]="item"></app-item-detail>
+
+  <button (click)="isActiveToggle()">Toggle app-item-detail</button>
+</div>
+<p>If currentCustomer isn't null, say hello to Laura:</p>
+<div *ngIf="currentCustomer">Hello, {{currentCustomer.name}}</div>
+<p>nullCustomer is null by default. NgIf guards against null. Give it a value to show it:</p>
+<div *ngIf="nullCustomer">Hello, <span>{{nullCustomer}}</span></div>
+<button (click)="giveNullCustomerValue()">Give nullCustomer a value</button>
+
+
+<h4>NgIf binding with template (no *)</h4>
+
+<ng-template [ngIf]="currentItem">Add {{currentItem.name}} with template</ng-template>
+<hr><hr>
+<h2>Built-in structural directives</h2>
+<h3 id="ngIf">NgIf Binding</h3>
+<div>
+  <p>If isActive is true, app-item-detail will render: </p>
+  <app-item-detail *ngIf="isActive" [item]="item"></app-item-detail>
+
+  <button (click)="isActiveToggle()">Toggle app-item-detail</button>
+</div>
+<p>If currentCustomer isn't null, say hello to Laura:</p>
+<div *ngIf="currentCustomer">Hello, {{currentCustomer.name}}</div>
+<p>nullCustomer is null by default. NgIf guards against null. Give it a value to show it:</p>
+<div *ngIf="nullCustomer">Hello, <span>{{nullCustomer}}</span></div>
+<button (click)="giveNullCustomerValue()">Give nullCustomer a value</button>
+
+<h4>NgIf binding with template (no *)</h4>
+<ng-template [ngIf]="currentItem">Add {{currentItem.name}} with template</ng-template>
+<hr>
+
+<h4>Show/hide vs. NgIf</h4>
+<!-- isSpecial is true -->
+<div [class.hidden]="!isSpecial">Show with class</div>
+<div [class.hidden]="isSpecial">Hide with class</div>
+
+<p>ItemDetail is in the DOM but hidden</p>
+<app-item-detail [class.hidden]="isSpecial"></app-item-detail>
+
+<div [style.display]="isSpecial ? 'block' : 'none'">Show with style</div>
+<div [style.display]="isSpecial ? 'none'  : 'block'">Hide with style</div>
+
+<hr>
+<h2 id="ngFor">NgFor Binding</h2>
+
+<div class="box">
+  <div *ngFor="let item of items">{{item.name}}</div>
+</div>
+
+<p>*ngFor with ItemDetailComponent element</p>
+<div class="box">
+  <app-item-detail *ngFor="let item of items" [item]="item"></app-item-detail>
+</div>

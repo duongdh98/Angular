@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "947e1eca-6940-4304-a19d-73306f601f92"
+    "analytics": "8a06b8be-843d-4fce-b634-d88091683211"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "di-provides": {
+    "buildDirective": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/di-provides",
+            "outputPath": "dist/buildDirective",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "di-provides:build:production"
+              "browserTarget": "buildDirective:build:production"
             },
             "development": {
-              "browserTarget": "di-provides:build:development"
+              "browserTarget": "buildDirective:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "di-provides:build"
+            "browserTarget": "buildDirective:build"
           }
         },
         "test": {
@@ -110,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "di-provides"
+  "defaultProject": "buildDirective"
 }

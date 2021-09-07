@@ -1,0 +1,11 @@
+<h3> Http client </h3>
+
+<button (click)="getPosts()" > get post </button>
+
+<div *ngFor="let post of posts | async" >
+  {{ post | json }}
+</div>
+
+<button (click)="createPost()" > Create Post </button>
+<hr>
+{{ newPosts | async | json }}

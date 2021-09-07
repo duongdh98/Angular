@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "947e1eca-6940-4304-a19d-73306f601f92"
+    "analytics": "6f0c751f-ff6f-4d9d-bd30-c548da8e2f7b"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "di-provides": {
+    "animations": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/di-provides",
+            "outputPath": "dist/animations",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "di-provides:build:production"
+              "browserTarget": "animations:build:production"
             },
             "development": {
-              "browserTarget": "di-provides:build:development"
+              "browserTarget": "animations:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "di-provides:build"
+            "browserTarget": "animations:build"
           }
         },
         "test": {
@@ -110,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "di-provides"
+  "defaultProject": "animations"
 }
