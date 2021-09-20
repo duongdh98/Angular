@@ -1,0 +1,37 @@
+.list-item-hello {
+    width: 654px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .item {
+        display: flex;
+        width: 318px;
+        height: 48px;
+        border-radius: 24px;
+        background: rgb(240, 240, 240);
+
+        img {
+            height: 24px;
+            width: 24px;
+            padding-top: 14px;
+            padding-left: 26px;
+            color: gray;
+        }
+
+        a {
+            padding-top: 14px;
+            padding-left: 20px;
+            text-decoration: none;
+            color: black;
+            
+            span {
+                font-weight: bold;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

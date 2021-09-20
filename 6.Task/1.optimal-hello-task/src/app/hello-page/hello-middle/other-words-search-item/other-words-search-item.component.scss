@@ -1,0 +1,58 @@
+.also-main {
+    border-bottom: 1px solid rgb(204, 201, 201);
+    padding-bottom: 8px;
+    padding-top: 12px;
+    cursor: pointer;
+
+    .also-hearder {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        align-content: center;
+        
+        img {
+            cursor: pointer;
+        }
+
+        .not-show {
+            transform: rotate(0deg);
+            transition: 0.5s;
+        }
+
+        .show {
+            transform: rotate(180deg);
+            transition: 0.5s;
+        }
+    }
+
+    .also-link {
+        transition: 0.5s;
+
+        a {
+            text-decoration: underline;
+            color: blue;
+        }
+    }
+
+    .also-content {
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .also-content-show {
+        height: auto;
+
+        img {
+            transform: rotate(180deg);
+        }
+    }
+    
+    .also-content-hide {
+        height: 0;
+
+        img {
+            transform: rotate(0deg);
+        }
+    }
+}

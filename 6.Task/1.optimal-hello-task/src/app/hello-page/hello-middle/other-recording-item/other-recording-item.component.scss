@@ -1,0 +1,32 @@
+.hello-other-item {
+    width: 654px;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(204, 201, 201);
+    margin-top: 10px;
+
+    .title-item {
+        margin-top: 10px;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            :hover {
+                text-decoration: underline;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .picture-item {
+        width: 110px;
+        height: 58px;
+        border-radius: 8px;
+        position: relative;
+    }
+}

@@ -1,0 +1,31 @@
+.play-list {
+    border-top: 1px solid rgb(212, 212, 212);
+    padding-bottom: 6px;
+
+    a {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .box-play {
+        display: flex;
+        gap: 20px;
+        align-self: center;
+
+        .picture {
+            
+            img {
+                width: 120px;
+                height: 80px;
+                border-radius: 10px;
+            }
+        }
+
+        .text-content {
+            margin-top: 8px;
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}

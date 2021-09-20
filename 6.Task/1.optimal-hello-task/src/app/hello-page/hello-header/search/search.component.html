@@ -1,0 +1,19 @@
+<div [className]="showHintInput ? 'search-default input-search' : 
+                 'search-changed input-search'">
+    <div class="main" [style]= "'--popupHeigh:' + popupHeigh ">
+    <img id="icon-input-search" [style]="'--searchIconWidth:' + searchIconWidth"
+         src="../../../../assets/svg/search-icon.svg">
+    <input  (keyup)="onKey($event)"
+            (focusout)="onEsc($event)"
+            (click)="showPopup()"
+            type="text" name="" id="input-search">
+    <img id="icon-input-close" [style]="'--closeIconWidth:' + closeIconWidth"
+         src="../../../../assets/svg/close.svg" alt="">
+    <img id="icon-voice" 
+        src="../../../../assets/svg/voice-icon.svg" 
+        alt="" srcset="">
+    <img id="icon-input" 
+        src="../../../../assets/svg/search-icon.svg" 
+        alt="" srcset="">
+    </div>
+</div>

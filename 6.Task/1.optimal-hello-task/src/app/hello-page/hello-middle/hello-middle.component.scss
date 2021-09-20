@@ -1,0 +1,430 @@
+.middle-main {
+    display: flex;
+    font-family: arial,sans-serif;
+    justify-content: flex-start;
+
+    .middle-left {
+        flex: 2;
+
+        .hello-item {
+            width: 654px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 180px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgb(204, 201, 201);
+            
+            .about-result {
+                margin-top: 16px;
+                margin-bottom: 24px;
+
+                span {
+                    color: grey;
+                    font-size: 14px;
+                }
+            }
+
+            #hello-title {
+                margin-top: 18px;
+                font-size: 20px;
+                color: blue;
+                text-decoration: none;
+            }
+
+            #hello-title:hover {
+                text-decoration: underline;
+            }
+
+            img {
+                width: 654px;
+                height: 312px;
+                border-radius: 8px;
+            }
+
+            span {
+                margin-top: 8px;
+                margin-bottom: 8px;
+                font-size: 14px;
+
+                a {
+                    text-decoration: none;
+                    color: grey;
+                }
+            }
+        }
+        
+        .lyrics-item {
+            margin-left: 180px;
+            margin-top: 28px;
+            display: flex;
+            flex-direction: column;
+
+            #lyrics-name {
+                font-size: 20px;
+            }
+
+            span {
+                padding-top: 8px;
+                font-size: 14px;
+            }
+
+            #source-title {
+                color: gray;
+                margin-top: 10px;
+                font-size: 12px;
+
+                a {
+                    color: gray;
+                }
+            }
+        }
+
+        .available-item {
+            width: 654px;
+            margin-top: 18px;
+            border-top: 1px solid rgb(204, 201, 201);
+            margin-left: 180px;
+            display: flex;
+            flex-direction: column;
+
+            .spotify {
+                border-top: 1px solid rgb(204, 201, 201);
+                margin-top: 6px;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                display: flex;
+                width: 654px;
+            }
+
+            .deezer {
+                border-top: 1px solid rgb(204, 201, 201);
+                border-bottom: 1px solid rgb(204, 201, 201);
+                padding-top: 6px;
+                padding-bottom: 6px;
+                display: flex;
+                margin-bottom: 10px;
+                width: 654px;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                padding-left: 6px;
+                padding-top: 2px;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            #available-name {
+                margin-top: 26px;
+                font-size: 20px;
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            #album, #release, #genre, #nomi {
+                padding-top: 10px;
+            }
+        }
+
+        .title-other {
+            margin-top: 30px;
+            margin-bottom: 14px;
+
+            span {
+                font-size: 20px;
+                text-decoration: none;
+                color: black;
+                cursor: pointer;
+            }
+
+            span:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .hello-other-item {
+            cursor: pointer;
+
+            span {
+                color: grey;
+            }
+
+            img {
+                position: absolute;
+                width: 101px;
+                height: 58px;
+                border-radius: 10px;
+            }
+
+            .view-more {
+                margin-top: 18px;
+                margin-bottom: 8px;
+
+                a {
+                    color: grey;
+                    text-decoration: none;
+                    padding-left: 0px;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        .people-also-search {
+
+            .title-also {
+                padding-top: 50px;
+                padding-bottom: 8px;
+                border-bottom: 1px solid rgb(204, 201, 201);
+
+                span {
+                    font-size: 20px;
+                }
+
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+                font-size: 20px;
+                padding-left: 0px;
+                vertical-align: 10px;
+            }
+
+            a:hover {
+                color: black;
+                text-decoration: underline;
+            }
+
+            span:hover {
+                text-decoration: none;
+            }
+
+            .list-search {
+                display: flex;
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgb(204, 201, 201);
+
+                gap: 10px;
+                justify-content: space-between;
+                
+                .also-content 
+                {
+                    display: flex;
+                    flex-direction: column;
+
+                    a {
+                        font-size: 14px;
+                        padding-left: 0px;
+                    }
+
+                    #singer {
+                        vertical-align: 20PX;
+                        color: gray;
+                    }
+                }
+
+                img {
+                    cursor: pointer;
+                    width: 82px;
+                    height: 40px;
+                    border-radius: 8px;
+                }
+
+                a{
+                    font-size: 18px;
+                    color: blue;
+
+                    span {
+                        color: grey;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .other-content-item {
+
+            .img-video-item {
+                display: flex;
+                padding-top: 30px;
+                border-bottom: 1px solid rgb(204, 201, 201);
+                padding-bottom: 10px;
+
+                img {
+                    height: 24px;
+                    width: 24px;
+                }
+
+                span {
+                    padding-top: 20px;
+                    padding-left: 10px;
+                    font-size: 20px;
+                }
+            }
+
+            img {
+                margin-top: 10px;
+                width: 120px;
+                height: 70px;
+                border-radius: 6px;
+            }
+
+            .content {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    color: blue;
+                    font-size: 16px;
+                }
+
+                b {
+                    color: black;
+                    font-weight: 100;
+                    font-size: 16px;
+                }
+
+                span {
+                    color: gray;
+                }
+
+                #note-youtobe {
+                    margin-top: 16px;
+                }
+            }
+        }
+
+        .wiki-website {
+            margin-top: 30px;
+            a {
+                font-size: 20px;
+            }
+
+            .item-wiki {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    padding-top: 10px;
+                }
+
+                #note-wiki {
+                    padding-top: 6px;
+                }
+
+                .detail-wiki {
+                    display: flex;
+                    margin-top: 10px;
+                    margin-bottom: 8px;
+                    gap: 60px;
+
+                    .item-detail {
+
+                        span {
+
+                            a {
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+
+                    span {
+                        font-size: 14px;
+                        color: gray;
+
+                        a {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                span {
+                    font-size: 15px;
+                    color: gray;
+                }
+
+                #time-wiki {
+                    color: gray;
+                }
+
+                a {
+                    color: blue;
+                }
+            }
+        }
+
+        .sline-show-item {
+            margin-top: 30px;
+            width: 654px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .other-website-hello {
+
+            .item-website {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    font-size: 14px;
+                    padding-top: 6px;
+                    color: gray;
+                }
+
+                a {
+                    color: blue;
+                    font-size: 20px;
+                    padding-top: 8px;
+                }
+
+                #content {
+                    color: gray;
+                }
+            }
+        }
+
+        .gif-show {
+            width: 654px;
+            margin-top: 30px;
+        }
+
+        .search-other-words {
+            margin-top: 30px;
+
+            .title {
+                margin-bottom: 20px;
+
+                a {
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .google-picture-item {
+            margin-top: 20px;
+            width: 654px;
+            img {
+                margin-left: 180px ;
+            }
+        }
+    }
+    .about {
+        margin-top: 50px;
+        flex: 1;
+        margin-left: 60px;
+    }
+    .middle-right {
+        flex: 2;
+    }
+}

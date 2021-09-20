@@ -1,0 +1,53 @@
+.header-main {
+    display: flex;
+    flex-direction: column;
+
+    .header-search {
+        display: flex;
+        margin-top: 26px;
+        justify-content: flex-start;
+
+        .search-left {
+            min-width: 160px;
+
+            img {
+                width: 98px;
+                height: 40px;
+                padding-left: 20px;
+            }
+        }
+
+        .search-middle {
+            flex: 5;
+        }
+
+        .search-right {
+            flex: 2;
+            min-width: 350px;
+            padding-right: 20px;
+        }
+    }
+    .fixed {
+        top: -26px;
+        height: 70px;
+        width: 100%;
+        position: fixed;
+        z-index: 10;
+        transition: 0.2s linear;
+        background: white;
+
+        .search-left, .search-middle {
+            margin-top: 14px;
+        }
+
+        .search-right {
+            margin-top: 20px;
+        }
+    }
+    
+    .no-fixed {
+        position: static;
+        transition: 0.2s linear;
+        background: white;
+    }
+}

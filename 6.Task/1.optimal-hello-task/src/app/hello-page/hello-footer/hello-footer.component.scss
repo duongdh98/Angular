@@ -1,0 +1,36 @@
+.where-i-am {
+    display: flex;
+    flex-direction: column;
+
+    .first {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 180px;
+        border-bottom: 1px solid rgb(204, 204, 204);
+
+        span {
+            padding-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .second {
+        padding-left: 180px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        gap: 20px;
+        
+        span {
+            color: gray;
+        }
+    }
+}

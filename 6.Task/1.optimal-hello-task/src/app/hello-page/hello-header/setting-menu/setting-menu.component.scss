@@ -1,0 +1,45 @@
+.setting-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    position: relative;
+
+    .main {
+        height: 100%;
+        display: flex;
+        position: relative;
+        gap: 20px;
+
+        img {
+            cursor: pointer;
+            height: 24px;
+            width:  24px;
+        }
+    }
+
+    .main::after {
+        content: '';
+        position: absolute;
+        height: var(--heighMenu);
+        width: 300px;
+        top: 30px;
+        right: 15px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    }
+}
+
+.setting-menu::before {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    top: 30px;
+    height: var(--heighSetting);
+    right: 50px;
+    width: 200px;
+    z-index: 100;
+}

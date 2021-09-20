@@ -1,0 +1,15 @@
+<div class="play-list">
+    <div class="title-box">
+        <ng-content select="[title]"></ng-content>
+    </div>
+    <div class="box-play">
+        <div class="picture">
+            <a href="">
+                <ng-content select="[picture]"></ng-content>
+            </a>
+        </div>
+        <div class="text-content">
+            <ng-content select="[content]"></ng-content>
+        </div>
+    </div>
+</div>

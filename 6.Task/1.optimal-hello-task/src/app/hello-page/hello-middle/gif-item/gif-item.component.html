@@ -1,0 +1,30 @@
+<div class="gif-show">
+    <a (click)="onClick()">
+        <div class="header">
+            <div class="gif">
+                <img 
+                    src="../../../../assets/gif-show/hello-gif.PNG" 
+                    alt="">
+                <p> Hello gif </p>
+            </div>
+            <div class="arrow" >
+                <img [ngClass]="arrowGif ? 'show' : 'not-show'"
+                    src="../../../../assets/icon-arrow-down.PNG" 
+                    alt="">
+            </div>
+        </div>
+    </a>
+    <hr>
+    <div class="main" [style]="'--heighEvt:' + heighGif">
+        <div class="list-gif">
+            <img src="../../../../assets/gif-show/pic.PNG" alt="">
+        </div>
+        <div class="see-more">
+            <a href="https://www.google.com/search?sxsrf=AOaemvKzFl_J6X1Ss8NYcMz8G-9khA7ThA:1631451786853&q=Hello+gif&sa=X&ved=2ahUKEwi4vOTBv_nyAhUhxYsBHcZFBagQ4qYDegQIJxAL&biw=957&bih=756">
+                <img 
+                    src="../../../../assets/gif-show/see-more.PNG" 
+                    alt="">
+            </a>
+        </div>
+    </div>
+</div>

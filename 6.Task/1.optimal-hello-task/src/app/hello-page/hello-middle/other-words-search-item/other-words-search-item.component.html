@@ -1,0 +1,22 @@
+<a (click)="onClick()">
+  <div class="also-main">
+    <div class="also-hearder">
+      <ng-content select="[title]"></ng-content>
+      <img [className]="showContent ? 'notShow': 'show'" 
+          src="../../../../assets/list-icons/icon-arrow-down.PNG" >
+    </div>
+    <div [className]="showContent ? 'also-content also-content-hide' : 
+                    'also-content also-content-show'" >
+        <ng-content select="[content]"></ng-content>
+        <div class="also-link">
+            <span> 
+                https://www.billboard.com>articles>columns>pop 
+            </span>
+            <br>
+            <a href="">
+                Adele Quit Smoking Because She Feared It Would Have Killed Her
+            </a>
+        </div>
+    </div>
+  </div>
+</a>

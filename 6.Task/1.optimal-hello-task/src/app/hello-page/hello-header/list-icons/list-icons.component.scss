@@ -1,0 +1,46 @@
+.header-icons {
+    padding-left: 160px;
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 10px;
+
+    .item {
+        display: flex;
+        align-self: center;
+        gap: 6px;
+        padding-left: 22px;
+        cursor: pointer;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+
+        span {
+            color: rgb(94, 91, 91);
+            font-size: 15px;
+        }
+    }
+    
+    .btn-tool {
+        display: flex;
+        align-self: center;
+        padding-left: 198px;
+
+        span {
+            color: rgb(94, 91, 91);
+            font-size: 10px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        :hover {
+            border: 1px solid rgb(165, 162, 162);
+            background: rgb(243, 243, 243);
+        }
+    }
+}

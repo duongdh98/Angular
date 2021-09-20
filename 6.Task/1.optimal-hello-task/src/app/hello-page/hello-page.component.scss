@@ -1,0 +1,17 @@
+.hello-page {
+    display: flex;
+    flex-direction: column;
+
+    .page-header {
+        border-bottom: 1px solid rgb(204, 201, 201);
+    }
+
+    .page-middle {
+       
+    }
+
+    .page-footer {
+        height: 90px;
+        background: rgb(240, 240, 240);
+    }
+}

@@ -1,0 +1,21 @@
+<div class="header-main">
+
+  <div class="header-search"
+      (scroll)="onScroll()" 
+      [ngClass]="navbarFixed ? 'fixed': 'no-fixed'">
+    <div class="search-left">
+        <img src="../../../assets/picture-contents/google.png">
+    </div>
+    <div class="search-middle">
+      <app-search></app-search>
+    </div>
+    <div class="search-right">
+      <app-setting-menu></app-setting-menu>
+    </div>
+  </div>
+
+  <div class="header-list-icons">
+    <app-list-icons></app-list-icons>
+  </div>
+
+</div>
