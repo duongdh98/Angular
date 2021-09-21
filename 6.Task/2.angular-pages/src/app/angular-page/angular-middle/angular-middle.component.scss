@@ -1,0 +1,92 @@
+.angular-middle {
+  display: flex;
+  flex-direction: column;
+
+  .middle-across {
+    background: rgb(44, 43, 43);
+
+    .line {
+      border-top: 1px solid white;
+      margin-left: 40px;
+      margin-right: 40px;
+      opacity: 0.4;
+    }
+
+  }
+
+  .middle-speed-performance {
+    background: rgb(44, 43, 43);
+
+    .line {
+      border-top: 1px solid white;
+      margin-left: 40px;
+      margin-right: 40px;
+      opacity: 0.4;
+    }
+    
+  }
+
+  .middle-incredible-tooling {
+    background: rgb(44, 43, 43);
+
+    .line {
+      border-top: 1px solid white;
+      margin-left: 40px;
+      margin-right: 40px;
+      opacity: 0.4;
+    }
+  }
+
+  .middle-loved {
+    background: rgb(44, 43, 43);
+  }
+
+  .middle-try-it-now {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(44, 43, 43);
+    padding-top: 10px;
+    padding-bottom: 40px;
+
+    .try-it-main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      padding: 30px;
+      gap: 30px;
+
+      .icon {
+
+        img {
+          height: 70px;
+          width: 70px;
+        }
+      }
+
+      .text-content {
+        display: flex;
+        max-width: 342px;
+        min-width: 144px;
+        flex-direction: column;
+
+        a {
+          text-decoration: none;
+          color: white;
+          line-height: 2;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        span {
+          color: #7fc9ff;
+          font-size: 20px;
+        }
+
+      }
+    }
+  }
+}

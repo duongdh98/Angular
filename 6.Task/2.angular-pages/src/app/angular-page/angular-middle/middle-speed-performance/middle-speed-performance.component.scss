@@ -1,0 +1,50 @@
+.main-speed-performance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap:44px;
+
+  .speed-performance-left {
+    max-width: 390px;
+
+    .text-content {
+      width: 100%;
+
+      span {
+        color: #7fc9ff;
+        font-size: 20px;
+      }
+
+      p {
+        color: white;
+        line-height: 2;
+      }
+    }
+  }
+
+  .speed-performance-right {
+    max-width: 290px;  ;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 465px) {
+
+  .main-speed-performance {
+    flex-direction: column;
+    gap: 10px;
+    
+    .speed-performance-left {
+
+      .text-content {
+        text-align: center;
+      }
+    }
+  }
+
+}

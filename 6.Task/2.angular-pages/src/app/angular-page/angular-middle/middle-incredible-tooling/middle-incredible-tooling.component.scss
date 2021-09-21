@@ -1,0 +1,48 @@
+.incredible-tooling-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  gap: 30px;
+
+  .incredible-tooling-left {
+    max-width: 360px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .incredible-tooling-right {
+
+    .text-content {
+      max-width: 390px;
+
+      span {
+        color: #7fc9ff;
+        font-size: 20px;
+      }
+
+      p {
+        color: white;
+        line-height: 2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 465px) {
+
+  .incredible-tooling-main {
+    flex-direction: column;
+
+    .incredible-tooling-right {
+
+      .text-content {
+        text-align: center;
+      }
+    }
+  }
+
+}

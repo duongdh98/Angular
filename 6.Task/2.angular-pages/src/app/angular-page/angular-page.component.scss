@@ -1,0 +1,22 @@
+.angular-page {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg,#0d47a1,#1976d2);
+  
+  .angular-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .angular-middle {
+    
+  }
+
+  .angular-footer {
+
+  }
+}
+
+@media screen and (max-width: 1132px) {
+  
+}

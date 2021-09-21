@@ -1,0 +1,50 @@
+.loved-main {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+  gap: 30px;
+
+  .loved-left {
+
+    .text-content {
+      max-width: 390px;
+
+      span {
+        color: #7fc9ff;
+        font-size: 20px;
+      }
+
+      p {
+        color: white;
+        line-height: 2;
+      }
+
+    }
+  }
+
+  .loved-right {
+    max-width: 410px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 465px) {
+
+  .loved-main {
+    flex-direction: column;
+
+    .loved-left {
+      
+      .text-content {
+        text-align: center;
+      }
+
+    }
+
+  }
+
+}
