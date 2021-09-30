@@ -1,0 +1,129 @@
+.box {
+
+  background: white;
+  flex-direction: column; 
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 500px;
+
+  .header {
+    background: rgb(49, 49, 49);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: white;
+    
+    span {
+      float: left;
+      padding: 10px;
+    }
+
+    #close {
+      float: right;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+  }
+
+  .send-to {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    gap: 6px;
+    
+    span {
+      color: gray;
+    }
+
+    input {
+      outline: none;
+      border: none;
+      width: 78%;
+    }
+
+    #title {
+      padding: 8px;
+      padding-right: 10px;
+      color: gray;
+    }
+  }
+
+  .subject {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    input {
+      outline: none;
+      border: none;
+      width: 100%;
+      padding: 8px;
+    }
+  }
+
+  .tool-bar {
+    padding: 10px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+
+    mat-icon {
+      cursor: pointer;
+      font-size: 18px;
+      padding-left: 14px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        padding: 12px;
+        opacity: 0.2;
+        top: -2px;
+        left: 12px;
+        border-radius: 4px;
+      }
+
+      &:hover::before {
+        background: black;
+      }
+    }
+
+    .btn-send {
+      padding-right: 16px;
+
+      button {
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background: blue;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+
+  .cc, .bcc {
+    display: none;
+  }
+
+  .body-chat {
+    height: 250px;
+    outline: none;
+    padding: 20px;
+  }
+}
+
+.close-chat {
+  display: none !important;
+}
+
+.open-chat {
+  display: flex !important;
+}

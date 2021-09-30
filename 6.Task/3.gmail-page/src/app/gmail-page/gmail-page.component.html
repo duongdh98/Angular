@@ -1,0 +1,179 @@
+<div class="page-main">
+
+  <div class="header">
+    <div class="header-main">
+
+      <div class="left">
+        <mat-icon id="icon-menu" aria-hidden="false">menu</mat-icon>
+        <img id ="logo" src="../../../assets/picture/logo_gmail.png" alt="">
+        <div class="input-search">
+          <mat-icon id="icon-search">search</mat-icon>
+          <input type="text" placeholder="Search mail">
+          <mat-icon id="icon-close">close</mat-icon>
+          <mat-icon id="icon-control">
+            <img src="../../../assets/svg/controll-icon.svg" alt="">
+          </mat-icon>
+        </div>
+      </div>
+    
+      <div class="right">
+        <mat-icon id="icon-help">help_outline</mat-icon>
+        <mat-icon (click)="quickSetting()" id="icon-setting">
+          <img src="../../assets/svg/setting-icon.svg" alt="">
+        </mat-icon>
+        <mat-icon id="icon-apps">apps</mat-icon>
+      </div>
+
+    </div>
+    <div class="line"></div>
+  </div>
+
+  <div class="middle-main">
+
+    <div class="compose">
+      <div class="add-message" (click)="addMessage()">
+        <img src="../../assets/svg/Plus.svg" alt="">
+        <span>Compose</span>
+      </div>
+      <div class="menu-choose" id="scroll-menu">
+        <app-detail-menu  [title]="titleMenu"></app-detail-menu>
+        <app-detail-menu  id="show-more"
+                          (click)="showMoreMenu()"
+                          [ngClass]="showMoreMenus ? 'not-show-less' : 'show-less'"
+                          [title]="titleClickMore">
+        </app-detail-menu>
+        <app-detail-menu  [title]="titleClickLess"
+                          (click)="closeMoreMenu()"
+                          [ngClass]="titleMoreMenu ? 'show-more' : 'not-show-more'">
+        </app-detail-menu>
+        <app-detail-menu  id="title-more"
+                          [ngClass]="titleMoreMenu ? 'show-more' : 'not-show-more'"
+                          [title]="titleMore">
+        </app-detail-menu>
+      </div>
+      <div class="meet">
+        <span>Meet</span>
+        <app-detail-menu [title]="titleMeet"></app-detail-menu>
+      </div>
+    </div>
+
+    <div class="all-mail">
+
+      <div class="tag-mail">
+        
+        <div class="left">
+          <div  class="check-all">
+            <input  type="checkbox" [formControl]="allCheck" 
+                    (change)="onCheckAll($event)" id="check-all">
+            <mat-icon id="drop-arrow"
+                      mat-raised-button #tooltip="matTooltip"
+                      matTooltip="Select"
+                      matTooltipHideDelay="100">
+              arrow_drop_down
+            </mat-icon>
+            <mat-icon id="replay"
+            mat-raised-button #tooltip="matTooltip"
+            matTooltip="Refresh"
+            matTooltipHideDelay="100">
+              replay
+            </mat-icon>
+            <mat-icon id="more-vert"
+                      mat-raised-button #tooltip="matTooltip"
+                      matTooltip="More"
+                      matTooltipHideDelay="100">
+              more_vert
+            </mat-icon>
+          </div>
+        </div>
+        
+        <div class="right">
+          <div class="quantity-maill">
+            <span>1-50 of 949</span>
+            <div class="menu">
+              <span>Newest</span>
+              <span>Oldest</span>
+            </div>
+          </div>
+          <mat-icon id="key-board-arrow-left"
+                    mat-raised-button #tooltip="matTooltip"
+                    matTooltip="Newer"
+                    matTooltipHideDelay="100">
+            keyboard_arrow_left
+          </mat-icon>
+          <mat-icon id="key-board-arrow-right"
+                    mat-raised-button #tooltip="matTooltip"
+                    matTooltip="Older"
+                    matTooltipHideDelay="100">
+            keyboard_arrow_right
+          </mat-icon>
+          <mat-icon id="key-board"
+                    mat-raised-button #tooltip="matTooltip"
+                    matTooltip="Input tools on/off (Ctrl-Shift-K)"
+                    matTooltipHideDelay="100">
+            keyboard
+          </mat-icon>
+          <mat-icon id="drop-arrow"
+                    mat-raised-button #tooltip="matTooltip"
+                    matTooltip="Select input tool"
+                    matTooltipHideDelay="100">
+                    arrow_drop_down
+          </mat-icon>
+        </div>
+
+      </div>
+
+      <div class="detail-mail" id="style-scrollbar">
+
+        <div class="head-tabs">
+          <div class="item" id="primary">
+            <mat-icon>inbox</mat-icon>
+            <span>Primary</span>
+          </div>
+          <div class="item" id="primary">
+            <mat-icon>people</mat-icon>
+            <span>Social</span>
+          </div>
+          <div class="item" id="primary">
+            <mat-icon>loyalty</mat-icon>
+            <span>Promotions</span>
+          </div>
+        </div>
+
+        <div class="middle-tabs">
+          <div class="all-message">
+            <app-detail-message></app-detail-message>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="quick-setting" [ngClass]="showSetting ? 'show-setting' : 'not-show-setting'"> 
+
+      <div class="header">
+        <div class="title">
+          <span id="quick-setting">Quick settings</span>
+          <mat-icon (click)="closeSetting()" id="close">close</mat-icon>
+        </div>
+        <button>See all settings</button>
+      </div>
+
+      <div class="middle">
+      </div>
+
+      <div class="footer">
+      </div>
+
+    </div>
+    
+    <div class="panel">
+    </div>
+
+  </div>
+
+  <div class="main-chat">
+    <div class="chat">
+      <app-box-chat></app-box-chat>
+    </div>
+  </div>
+</div>

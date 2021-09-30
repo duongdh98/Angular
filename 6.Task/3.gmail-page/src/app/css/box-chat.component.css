@@ -1,0 +1,40 @@
+.box {
+  background: white;
+  flex-direction: column;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 500px;
+}
+
+.box .header {
+  background: #313131;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: white;
+}
+
+.box .header span {
+  float: left;
+  padding: 10px;
+}
+
+.box .header #close {
+  float: right;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.box .body-chat {
+  height: 250px;
+  outline: none;
+  padding: 20px;
+}
+
+.close-chat {
+  display: none !important;
+}
+
+.open-chat {
+  display: flex !important;
+}
+/*# sourceMappingURL=box-chat.component.css.map */

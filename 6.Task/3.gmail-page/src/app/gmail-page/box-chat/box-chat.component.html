@@ -1,0 +1,45 @@
+<div class="box" [ngClass]="closeChat ? 'open-chat' : 'close-chat'">
+
+  <div class="header">
+    <span>New Message</span>
+    <mat-icon (click)="onClose()" id="close">close</mat-icon>
+  </div>
+
+  <div class="send-to">
+    <span id="title">To</span>
+    <input id="to" type="text">
+    <span>Cc</span>
+    <Span>Bcc</Span>
+  </div>
+
+  <div class="cc">
+    <span>Cc</span>
+    <input id="cc" type="text">
+  </div>
+
+  <div class="bcc">
+    <span>Bcc</span>
+    <input id="bcc" type="text">
+  </div>
+
+  <div class="subject">
+    <input id="subject" placeholder="Subject" type="text">
+  </div>
+
+  <div class="body-chat" contenteditable="true"></div>
+
+  <div class="tool-bar">
+    <div class="btn-send">
+      <button>Send</button>
+    </div>
+    <mat-icon>text_format</mat-icon>
+    <mat-icon> attach_file</mat-icon>
+    <mat-icon>link</mat-icon>
+    <mat-icon> insert_emoticon</mat-icon>
+    <mat-icon> call</mat-icon>
+    <mat-icon>file_copy</mat-icon>
+    <mat-icon> insert_photo</mat-icon>
+    <mat-icon>block</mat-icon>
+  </div>
+
+</div>

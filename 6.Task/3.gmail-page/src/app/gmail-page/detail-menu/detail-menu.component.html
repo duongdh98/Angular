@@ -1,0 +1,15 @@
+<div class="main" attr.id="{{detailIcon.idName}}" *ngFor="let detailIcon of detailIcons">
+   
+  <div class="icon" *ngIf="detailIcon.type == title">
+    <mat-icon >{{detailIcon.icon}}</mat-icon>
+  </div>
+
+  <div class="name" *ngIf="detailIcon.type == title">
+    <span name id="name">{{detailIcon.name}}</span>
+  </div>
+
+  <div class="number" *ngIf="detailIcon.type == title">
+    <span number id="number">{{detailIcon.number}}</span>
+  </div>
+
+</div>

@@ -1,0 +1,34 @@
+<div class="main" *ngFor="let message of allMessage">
+
+  <div class="left">
+    <div class="select-message">
+      <mat-icon >drag_indicator</mat-icon>
+      <mat-checkbox [formControl]="messageControl"
+                    (click)="changCheck()"
+                    mat-raised-button #tooltip="matTooltip"
+                    matTooltip="Select"
+                    matTooltipHideDelay="100">
+      </mat-checkbox>
+    </div>
+    <mat-icon id="star"
+              mat-raised-button #tooltip="matTooltip"
+              matTooltip="Select"
+              matTooltipHideDelay="100">
+      star_border
+    </mat-icon>
+    <span id=name>{{message.nameSent}}</span>
+    <div class="content">
+      <span id="content">{{message.contentMessage}}</span>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="list-choose">
+      <mat-icon id="dowload">cloud_download</mat-icon>
+      <mat-icon id="trash">restore_from_trash</mat-icon>
+      <mat-icon id="mark"> mail_outline</mat-icon>
+      <mat-icon id="snooze">timelapse</mat-icon>
+    </div>
+    <span>{{message.time}}</span>
+  </div>
+</div>

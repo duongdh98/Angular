@@ -1,0 +1,174 @@
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: black !important;
+}
+::ng-deep .mat-checkbox-ripple .mat-ripple-element {
+  background-color: black !important;
+}
+
+.main {
+  display: flex;
+  border-bottom: 1px solid rgb(0, 0, 0, .1);
+  background: white;
+  margin-right: 4px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+
+  &:hover > .left #star {
+    opacity: 0.8;
+  }
+
+  &:hover > .left .select-message mat-checkbox {
+    opacity: 1;
+  }
+  
+  &:hover > .left .select-message mat-icon {
+    opacity: 0.2;
+  }
+
+  &:hover > .right .list-choose{
+    display: flex;
+    padding-right: 0px;
+  }
+
+  &:hover > .right span{
+    display: none;
+  }
+
+  .left {
+    flex: 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    #star {
+      padding: 8px;
+      position: relative;
+      cursor: pointer;
+      opacity: 0.4;
+
+      &:hover::before {
+        background: black;
+        opacity: 0.14;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+      }
+    }
+    .select-message {
+      position: relative;
+
+      mat-icon {
+        position: absolute;
+        font-size: 20px;
+        padding-top: 10px;
+        opacity: 0;
+      }
+  
+      mat-checkbox {
+        padding-top: 10px;
+        padding-left: 16px;
+        padding-bottom: 10px;
+        opacity: 0.4;
+      }
+    }
+
+    #name {
+      min-width: 200px;
+    }
+
+    .content {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      height: 20px;
+
+      #content {
+        display: inline-flexbox;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 16px;
+    align-items: center;
+
+    .list-choose {
+      display: flex;
+      align-items: center;
+      display: none;
+      margin-right: 0px;
+      margin-left: 10px;
+
+      #dowload, #trash, #mark {
+        padding-left: 20px;
+        color: gray;
+        padding: 8px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          color: black;
+        }
+
+        &:hover::before {
+          background: black;
+          opacity: 0.14;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          border-radius: 50%;
+          height: 100%;
+          width: 100%;
+          top: 0px;
+          left: 0px;
+        }
+      }
+
+      #snooze {
+        color: gray;
+        position: relative;
+        cursor: pointer;
+        margin-left: 10px;
+
+        &:hover {
+          color: black;
+        }
+
+        &:hover::before {
+          background: black;
+          opacity: 0.14;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          border-radius: 50%;
+          padding: 8px;
+          height: 100%;
+          width: 100%;
+          top: -8px;
+          left: -8px;
+        }
+      }
+    }
+
+    span {
+      font-size: 14px;
+      padding-left: 20px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.main {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: rgb(223, 223, 223);
+  width: 236px;
+  cursor: pointer;
+
+  &:hover::after {
+    background: white;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    opacity: 0.3;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: -1;
+  }
+  .icon {
+    padding-left: 26px;
+    padding-top: 6px;
+
+    mat-icon {
+      font-size: 20px;
+    }
+  }
+
+  .name {
+    padding-left: 16px;
+  }
+
+  .number {
+
+  }
+}
+
+#inbox {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: white;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    opacity: 0.3;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    z-index: -1;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}

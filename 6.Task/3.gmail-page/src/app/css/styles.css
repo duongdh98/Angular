@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  background-image: url("./assets/picture/back-ground.jpg");
+  background-size: cover;
+  font-family: "Roboto","RobotoDraft","Helvetica","Arial","sans-serif";
+  height: 100vh;
+  overflow: hidden;
+}
+/*# sourceMappingURL=styles.css.map */
