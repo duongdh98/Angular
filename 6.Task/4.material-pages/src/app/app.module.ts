@@ -43,6 +43,19 @@ import { ToolBarComponent } from './material-pages/tool-bar/tool-bar.component';
 import { TooltipComponent } from './material-pages/tooltip/tooltip.component';
 import { TreeComponent } from './material-pages/tree/tree.component';
 
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -89,7 +102,20 @@ import { TreeComponent } from './material-pages/tree/tree.component';
     FormsModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatIconModule,
+    MatDividerModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatChipsModule,
+    MatDatepickerModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

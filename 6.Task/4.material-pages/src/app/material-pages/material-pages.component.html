@@ -1,8 +1,12 @@
 <h4>material-pages works!</h4>
-<ul>
+<div class="main">
+
+  <ul>
     <li *ngFor="let links of allLink" [routerLink]="[links.link]">
         <a>{{links.name}}</a>
     </li>
-</ul>
+  </ul>
 
+</div>
+<hr>
 <router-outlet></router-outlet>

@@ -1,6 +1,17 @@
-ul {
+.main {
+    height: 200px;
+    width: 400px;
+    overflow-y: scroll;
 
-    li {
-        cursor: pointer;
+    ul {
+
+        li {
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                background: rgb(19, 18, 18);
+            }
+        }
     }
 }
