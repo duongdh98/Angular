@@ -1,5 +1,8 @@
 <h4>material-pages works!</h4>
-<br>
 <ul>
-    <li>AutoComplete</li>
+    <li *ngFor="let links of allLink" [routerLink]="[links.link]">
+        <a>{{links.name}}</a>
+    </li>
 </ul>
+
+<router-outlet></router-outlet>
