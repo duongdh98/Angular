@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { messages } from './content-message';
+import { Message ,messages } from './content-message';
 import { FormControl, FormsModule } from '@angular/forms';
 import { GmailService } from '../gmail.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail-message',
@@ -11,10 +12,11 @@ import { GmailService } from '../gmail.service';
 export class DetailMessageComponent implements OnInit {
 
   @Input() allMessage = messages;
+  
 
   messageControl = new FormControl();
 
-  constructor(private gmailService: GmailService) { }
+  constructor(private gmailService: GmailService, private route: Router) { }
 
   ngOnInit(): void {
     
@@ -26,5 +28,9 @@ export class DetailMessageComponent implements OnInit {
 
   changCheck() {
     this.gmailService.checkedAll = false;
+  }
+
+  nextMesage(idMessage: Message) {
+    this.route.navigate(['../gmail-home/content'], { queryParams: { state: 'inbox', contentId: idMessage.id} })
   }
 }

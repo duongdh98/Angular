@@ -1,6 +1,6 @@
 <div class="main" *ngFor="let message of allMessage">
 
-  <div class="left">
+  <div class="left" (click)="nextMesage(message)" id={{message.id}}>
     <div class="select-message">
       <mat-icon >drag_indicator</mat-icon>
       <mat-checkbox [formControl]="messageControl"
@@ -12,8 +12,8 @@
     </div>
     <mat-icon id="star"
               mat-raised-button #tooltip="matTooltip"
-              matTooltip="Select"
-              matTooltipHideDelay="100">
+              matTooltip="Select"s
+              matTooltipHideDelay="100"> 
       star_border
     </mat-icon>
     <span id=name>{{message.nameSent}}</span>
@@ -31,4 +31,5 @@
     </div>
     <span>{{message.time}}</span>
   </div>
+  <router-outlet></router-outlet>
 </div>

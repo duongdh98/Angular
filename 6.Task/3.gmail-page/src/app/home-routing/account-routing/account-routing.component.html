@@ -1,0 +1,11 @@
+<ul>
+    <!-- // >> router param -->
+        <!-- <li><a [routerLink]="['/routing-home/account', 1]">Account 1</a></li>
+        <li><a [routerLink]="['/routing-home/account', 2]">Account 2</a></li>
+        <li><a [routerLink]="['/routing-home/account', 3]">Account 3</a></li> -->
+
+    <!-- // >> router query param -->
+    <li><a [routerLink]="['./']" [queryParams]="{account:1}">Account 1</a></li>
+    <li><a [routerLink]="['./']" [queryParams]="{val1:2, val2:12, val3: 678}">Account 2</a></li>
+    <li><a [routerLink]="['./']">Account 3</a></li>
+</ul>
