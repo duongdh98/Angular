@@ -1,0 +1,47 @@
+1. Material_angular
+    > matBadgeColor(primary, accent, warn)                      // Set color
+    > matBadge(number)                                          // Change number
+    > matBadgeDescription(string)                               // Discaption badge
+    > matBadgeDisabled(boolean)                                 // Disabled badge
+    > matBadgeHidden(boolean)                                   // Badge hidden
+    > matBadgeOverlap(boolean)                                  // 
+    > matBadgeSize(large, medium or small )                     // Change size badge
+    > matBadgePosition(above, below, before, after)             // Set position for badge
+    
+    > mat-button	                                            // Rectangular text button w/ no elevation
+    > mat-raised-button	                                        // Rectangular contained button w/ elevation
+    > mat-flat-button	                                        // Rectangular contained button w/ no elevation
+    > mat-stroked-button	                                    // Rectangular outlined button w/ no elevation
+    > mat-icon-button	                                        // Circular button with a transparent background, meant to contain an icon
+    > mat-fab	                                                // Circular button w/ elevation, defaults to theme's accent color
+    > mat-mini-fab	                                            // Same as mat-fab but smaller
+    ---> Shape of button < ---
+
+    > vertical                                                  // Whether the toggle group is vertical.
+    > multiple                                                  // Whether multiple button toggles can be selected.
+
+    > mat-card-title	                                        // Card title
+    > mat-card-subtitle	                                        // Card subtitle
+    > mat-card-content	                                        // Primary card content. Intended for blocks of text
+    > img mat-card-image	                                    // Card image. Stretches the image to the container width
+    > mat-card-actions	                                        // Container for buttons at the bottom of the card
+    > mat-card-footer	                                        // Section anchored to the bottom of the card
+    > mat-card-title-group                                      // Contenter some <tag>
+
+    > mat-card-sm-image                                         // Image In card is small
+    > mat-card-md-image                                         // Image In card is medium
+    > mat-card-lg-image                                         // Image In card is big
+    > mat-card-xl-image                                         // Image In card is biger
+    --> Use as some as class in css <--
+
+    > mat-button                                                // Inject of Material
+    -- > change <tag> < --
+
+    > ariaOrientation(horizontal, vertical)                     // Orientation of the chip list.
+    > labelPosition(above, below, before, after)                // 
+    > indeterminateindeterminate(boolean)                       // controll statsu checkbox
+    -- > Use for checkbox < --
+
+    > ariaOrientation(horizontal, vertical)                     // Orientation of the chip list.
+
+

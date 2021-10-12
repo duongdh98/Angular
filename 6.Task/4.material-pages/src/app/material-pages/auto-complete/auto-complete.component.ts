@@ -11,7 +11,7 @@ import {map, startWith} from 'rxjs/operators';
 export class AutoCompleteComponent implements OnInit {
 
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  options: string[] = ['One', 'Two', 'Three', 'Four'];
   filteredOptions: Observable<string[]>;
 
   constructor() {};

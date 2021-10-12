@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CheckBoxComponent implements OnInit {
 
   checked = false;
-  indeterminate = false;
+  indeterminate = true;
   labelPosition: 'before' | 'after' = 'after';
   disabled = false;
   
