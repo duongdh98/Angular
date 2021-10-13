@@ -1,0 +1,19 @@
+2. Modules
+
+    > Admin ...
+    
+        >> User
+
+        -> use.interface.js <-
+            + Use       // type, id, name, email, pwd, scopes(Phạm vi)
+            + ViewUse   // type, id, name, email, pwd, roles, oldRoles
+            + UseRole   // id, use, permisstion
+        
+        -> use.service.js <-
+
+            + values :
+                - isLoading$                // detect when call api
+                - loadingIndicator$         // table loading indicator
+                
+
+
