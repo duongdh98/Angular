@@ -1,19 +1,147 @@
-2. Modules
+.Interface
 
-    > Admin ...
-    
-        >> User
+export interface ModuleDetail {
+  id: string;
+  name: string;
+}
 
-        -> use.interface.js <-
-            + Use       // type, id, name, email, pwd, scopes(Phạm vi)
-            + ViewUse   // type, id, name, email, pwd, roles, oldRoles
-            + UseRole   // id, use, permisstion
-        
-        -> use.service.js <-
+export interface ModuleType {
+  id: string;
+  name: string;
+  component?: ModuleDetail[];
+}
 
-            + values :
-                - isLoading$                // detect when call api
-                - loadingIndicator$         // table loading indicator
-                
+export interface Modules {
+  id: string;
+  name: string;
+  parent?: string;
+  component?: ModuleType[];
+}
 
-
+export const modules: Modules[] = [
+  { 
+    id: 'web-app', 
+    name: 'Web app',
+    component: [
+      {
+        id: 'personnel',
+        name: 'Personnel',
+        component: [
+          {id: 'personnel-person', name: 'Person'},
+          {id: 'personnel-workshift', name: 'Workshift'},
+          {id: 'personnel-workgroup', name: 'Workgroup'},
+          {id: 'personnel-class', name: 'Class'},
+          {id: 'personnel-property', name: 'Property'},
+          {id: 'personnel-availability', name: 'Availability'},
+          {id: 'personnel-workgroup-availability', name: 'Workgroup Availability'},
+          {id: 'personnel-payroll', name: 'Payroll'},
+          {id: 'personnel-ole', name: 'OLE'},
+          {id: 'personnel-ole-export', name: 'OLE Export'},
+          {id: 'personnel-qualityfaction', name: 'Qualityfaction'},
+        ]
+      },
+      {
+        id: 'material',
+        name: 'Material',
+        component: [
+          {id: 'material-definition', name: 'Definition'},
+          {id: 'material-class', name: 'Class'},
+          {id: 'material-property', name: 'Property'},
+          {id: 'material-test-spec', name: 'Test Spec'}
+        ]
+      },
+      {
+        id: 'scope',
+        name: 'Scope',
+        component: [
+          {id: 'scope-tree', name: 'Scope Tree'},
+          {id: 'scope-class', name: 'Class'},
+          {id: 'scope-Property', name: 'Property'},
+          {id: 'scope-line-log-book', name: 'Line Log Book'}      
+        ]
+      },
+      {
+        id: 'physical-asset',
+        name: 'Physical Asset',
+        component: [
+          {id: 'physical-asset-asset', name: 'Asset'},
+          {id: 'physical-asset-class', name: 'Class'},
+          {id: 'physical-asset-property', name: 'Property'},
+          {id: 'physical-asset-test-spec', name: 'Test Spec'},
+          {id: 'physical-asset-analysis', name: 'Analysis'},
+        ]
+      },
+      {
+        id: 'definition',
+        name: 'Definition',
+        component: [
+          {id: 'definition-work-list', name: 'Work List'},
+          {id: 'definition-work-master', name: 'Work MasTer'}
+        ]
+      },
+      {
+        id: 'quality',
+        name: 'Quality',
+        component: [
+          {id: 'quality-pareto-analysis', name: 'Pareto Analysis'},
+          {id: 'quality-paynter-chart', name: 'Paynter Chart'},
+          {id: 'quality-process-analysis', name: 'Process Analysis'},
+          {id: 'quality-product-analysis', name: 'Product Analysis'},
+          {id: 'quality-spc', name: 'SPC'}
+        ]
+      },
+      {
+        id: 'production',
+        name: 'Production',
+        component: [
+          {id: 'production-couting', name: 'Counting'},
+          {id: 'production-request', name: 'Request'},
+          {id: 'production-progress', name: 'Progress'},
+          {id: 'production-workunit-gantt', name: 'Workunit Gantt'},
+          {id: 'production-personnel-gantt', name: 'Personnel Gantt'},
+          {id: 'production-vsm', name: 'VSM'}
+        ]
+      },
+      {
+        id: 'traceability',
+        name: 'Traceability',
+        component: [
+          {id: 'traceability-personnel', name: 'Personnel'},
+          {id: 'traceability-material', name: 'Material'},
+          {id: 'traceability-physical-asset', name: 'Physical Asset'},
+        ]
+      },
+      {
+        id: 'zenbee-tools',
+        name: 'Zenbee Tools',
+        component: [
+          {id: 'zenbee-tools-device', name: 'Device'},
+          {id: 'zenbee-tools-debug', name: 'Debug'},
+          {id: 'zenbee-tools-file', name: 'File'},
+          {id: 'zenbee-tools-asset', name: 'Asset'}
+        ]
+      },
+    ]
+  },
+  {
+    id: 'mobile-app', 
+    name: 'Mobile app',
+    component: [
+      {
+        id: 'personnel',
+        name: 'Personnel',
+        component: []
+      },
+      {
+        id: 'material',
+        name: 'Material',
+        component: []
+      },
+      {
+        id: 'pshysical-asset',
+        name: 'Physical Asset',
+        component: []
+      },
+    ]
+  }
+]
