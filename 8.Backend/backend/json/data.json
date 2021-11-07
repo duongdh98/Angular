@@ -1,0 +1,20 @@
+{
+    "people": [
+        {
+            "id": 1,
+            "name": "Sara",
+            "age": 23,
+            "gender": "Female",
+            "department": "History",
+            "car": "Honda"
+        },
+        {
+            "id": 2,
+            "name": "Sarad",
+            "age": 24,
+            "gender": "Female",
+            "department": "History",
+            "car": "Hondas"
+        }
+    ]
+}
