@@ -1,0 +1,20 @@
+<div class="main">
+
+  <div class="title">
+    <p>My Role</p>
+    <a type="button" [routerLink]="['/create/']">Create new role</a>
+  </div>
+
+  <div class="header">
+    <div id="id">ID</div>
+    <div id="name">Name</div>
+  </div>
+
+  <div class="items" *ngFor="let role of totalRoles">
+    <div class="id">{{role.id}}</div>
+    <div class="name">{{role.name}}</div>
+    <button id="update" type="button" [routerLink]="['/update/', role.id]">Update</button>
+    <button id="delete" type="button" (click)="deleteRoleHome(role.id)">Remove</button>
+  </div>
+
+</div>

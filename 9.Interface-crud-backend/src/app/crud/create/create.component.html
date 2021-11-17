@@ -1,0 +1,24 @@
+<div class="main">
+  <div>
+    <h1>Create Role</h1>
+    <form [formGroup]="rolesForm" (ngSubmit)="submitRoles()" novalidate>
+        <div class="form-group">
+            <p>Role ID</p>
+            <input type="text" formControlName="id" class="form-control" maxlength="20">
+        </div>
+        <div class="form-group">
+            <p>Role Name</p>
+            <textarea class="form-control" formControlName="name" rows="3" maxlength="50"></textarea>
+        </div>
+        <div class="form-group">
+            <p>Prent role</p>
+            <input type="text" formControlName="parent" class="form-control">
+        </div>
+        <div class="form-group">
+            <p>Permissions</p>
+            <input type="text" formControlName="permissions" class="form-control">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>

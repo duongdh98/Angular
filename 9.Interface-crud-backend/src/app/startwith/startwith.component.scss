@@ -1,0 +1,30 @@
+.main {
+
+  .roles {
+
+    .title {
+      display: flex;
+      padding: 16px;
+      background: greenyellow;
+
+      .id {
+        width: 300px;
+      }
+    }
+
+    .items {
+      display: flex;
+      padding: 10px;
+      padding-left: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background: greenyellow;
+      }
+
+      #id {
+        width: 300px;
+      }
+    }
+  }
+}

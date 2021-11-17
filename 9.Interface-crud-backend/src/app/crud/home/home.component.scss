@@ -1,0 +1,49 @@
+.main {
+
+  .title {
+    display: flex;
+    align-items: center;
+    background: greenyellow;
+
+    p {
+      padding-left: 20px;
+      width: 100px;
+    }
+
+    a {
+      padding-left: 86px;
+    }
+  }
+
+  .header {
+    display: flex;
+    padding: 14px;
+    padding-left: 20px;
+
+    #name {
+      padding-left: 274px;
+    }
+  }
+
+  .items {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(178, 247, 76);
+    }
+
+    .id {
+      width: 300px;
+    }
+
+    .name {
+      width: 200px;
+    }
+
+    #delete {
+      padding-left: 10px;
+    }
+  }
+}
